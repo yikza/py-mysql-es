@@ -1,0 +1,33 @@
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  user: user
+  password: pass
+  
+slave:
+  server_id: 1111
+  excludes_fields:
+    - passwd
+    - password
+  schemas:
+    - test
+
+es:
+  host: 127.0.0.1
+  port: 9200
+  bulk_size: 1 
+
+log:
+  run: log/run.log
+  
+binlog: 
+  mark: etc/mark.info
+
+email:
+  host: smtp.gmail.com
+  port: 587
+  from:
+    user: nobody@gmail.com
+    passwd: pass
+  to:
+    - xhook7@gmail.com
