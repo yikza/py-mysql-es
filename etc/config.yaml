@@ -1,8 +1,8 @@
 mysql:
   host: 127.0.0.1
   port: 3306
-  user: user
-  password: pass
+  user: root
+  password: root
   
 slave:
   server_id: 1111
@@ -15,10 +15,10 @@ slave:
 es:
   host: 127.0.0.1
   port: 9200
-  bulk_size: 1 
+  bulk_size: 3
 
 log:
-  run: log/run.log
+  run: logs/run.log
   
 binlog: 
   mark: etc/mark.info
@@ -30,4 +30,4 @@ email:
     user: nobody@gmail.com
     passwd: pass
   to:
-    - xhook7@gmail.com
+    - 421939022@qq.com
