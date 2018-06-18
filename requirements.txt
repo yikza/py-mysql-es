@@ -1,0 +1,5 @@
+elasticsearch==1.9.0
+mysql-replication==0.18
+pyelasticsearch==1.4.1
+PyMySQL==0.8.1
+PyYAML==3.12

@@ -1,7 +1,5 @@
 ## py-mysql-es
 
-<a href="https://travis-ci.org/hikdo/py-mysql-es"><img src="https://travis-ci.org/hikdo/py-mysql-es.svg?branch=master"></a>
-
 mysql binlog sync to elasticsearch
 
 
@@ -24,3 +22,11 @@ In your MySQL server configuration file you need to enable replication:
     max_binlog_size  = 100M
     binlog-format    = row
 
+## Mysql User Privileges
+
+```
+CREATE USER es IDENTIFIED BY 'es';
+GRANT SELECT, REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'es'@'%';
+-- GRANT ALL PRIVILEGES ON *.* TO 'es'@'%' ;
+FLUSH PRIVILEGES;
+```

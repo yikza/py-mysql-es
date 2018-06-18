@@ -1,8 +1,8 @@
 mysql:
   host: 127.0.0.1
   port: 3306
-  user: root
-  password: root
+  user: es
+  password: es
   
 slave:
   server_id: 1111
@@ -28,6 +28,6 @@ email:
   port: 587
   from:
     user: nobody@gmail.com
-    passwd: pass
+    passwd: passwd
   to:
     - 421939022@qq.com
