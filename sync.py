@@ -39,7 +39,7 @@ class MySync(object):
 
 		#resume stream
 		if os.path.isfile(self.mark_path):		
-			with open(self.mark_path, 'r') as y :
+			with open(self.mark_path, 'r') as y:
 				mark = yaml.load(y)
 				self.log_file = mark.get('log_file')
 				self.log_pos  = mark.get('log_pos')
@@ -83,7 +83,7 @@ class MySync(object):
 			resume_stream = bool(self.log_file and self.log_pos),
 			only_events=[WriteRowsEvent, UpdateRowsEvent, DeleteRowsEvent]
 		)
-		for binlogevent in stream :
+		for binlogevent in stream:
 			#binlogevent.dump()
 			self.log_file = stream.log_file
 			self.log_pos  = stream.log_pos
